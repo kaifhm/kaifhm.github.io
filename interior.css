@@ -201,6 +201,7 @@ footer {
         border-radius: 2px;
         z-index: 10;
         transition: all 250ms ease-in;
+        cursor: pointer;
     }
 
     .nav-toggle span::before {
