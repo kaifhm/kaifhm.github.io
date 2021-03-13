@@ -47,7 +47,6 @@ class Input {
 }
 
 submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
     const inputEls = document.querySelectorAll('form input');
     let valid = true;
     for (let inputEl of inputEls) {
@@ -58,6 +57,7 @@ submitBtn.addEventListener('click', (e) => {
     }
     console.log('clicked');
     if (valid) {
+        e.preventDefault();
         let button = e.target;
         button.innerHTML = '<i class="fas fa-check"></i>&nbsp;&nbsp;Submitted';
         button.style.backgroundColor = '#53c153'
