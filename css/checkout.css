@@ -26,7 +26,7 @@ body {
 
 h1 {
     color: var(--gray);
-    margin: 1rem auto;
+    margin: 1rem 0;
 }
 
 main {
@@ -41,7 +41,7 @@ main {
 }
 
 form {
-    margin: 1rem auto;
+    margin: 1rem 0;
     flex-basis: 50%;
     flex-shrink: 2;
     display: flex;
