@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --gray1: #333;
+    --gray2: #4f4f4f;
+    --gray3: #8c8c8c;
+    --gray4: #bdbdbd;
+    --orange: #f2994a;
+}
+
+body {
+    font-family: 'Montserrat';
+    max-width: min(90%, 1200px);
+    margin: 1rem auto;
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 1rem auto;
+}
+
+h3 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    color: var(--gray1);
+}
+
+h6 {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: var(--gray4);
+}
+
+em {
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.para img {
+    position: absolute;
+    width: 1rem;
+    height: auto;
+    top: 0.3rem;
+    left: -0.6rem;
+}
+
+.para {
+    position: relative;
+    color: var(--gray2);
+    font-family: 'Montserrat';
+    font-style: italic;
+    margin: 1.3rem;
+}
+
+.para p {
+    margin-left: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.info-card {
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 20px #0002;
+    height: min-content;
+}
+
+.info {
+    color: var(--gray1);
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+}
+
+.info + .info {
+    margin-top: 1.8rem;
+}
+
+.icon {
+    padding: 0.3rem;
+    margin-right: 0.3rem;
+    height: 1.2rem;
+    width: auto;
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.recipe {
+    flex-basis: 60%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1rem auto;
+    color: var(--gray2);
+}
+
+.recipe li {
+    margin: 0.2rem auto 0.4rem;
+}
+
+.recipe input {
+    margin-right: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray4);
+}
+
+
+.recipe ol > li {
+    position: relative;
+    list-style-type: none;
+    margin: 2.5rem;
+    counter-increment: recipe;
+}
+
+.recipe ol > li::before {
+    line-height: 0.6rem;
+    content: counter(recipe);
+    position: absolute;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    right: calc(100% + 1rem);
+    background-color: var(--orange);
+    width: 1rem;
+    height: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Playfair Display';
+    border-radius: 0.4rem;
+}
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--gray2);
+}
+
+@media only screen  and (max-width: 850px) {
+    main {
+        flex-direction: column;
+    }
+
+    .info-card {
+        /* outline: 1px solid red; */
+        margin: 1rem 0 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        align-items: center;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .info + .info {
+        margin-top: auto;
+    }
+    
+    .info:first-child {
+        flex-basis: 100%;
+        margin-bottom: 1.3rem;
+    }
+}

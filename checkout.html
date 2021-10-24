@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <title>Checkout</title>
+  <script src="/static/checkout.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Checkout</h1>
+    <div class="main">
+      <div class="apparels">
+        <div class="item">
+          <div>
+            <img src="/assets/checkout_assets/photo1.jpg" alt="">
+          </div>
+          <div class="info">
+            <div>
+              <h3>Vintage Backbag</h3>
+              <div class="flex">
+                <span class="orange mr-5">$54.99</span><span>$94.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <img src="/assets/checkout_assets/photo2.jpg" alt="">
+          </div>
+          <div class="info">
+            <div>
+              <h3>Levi Shoes</h3>
+              <div class="flex">
+                <span class="orange mr-5">$74.99</span><span>$124.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 3rem;">
+          <div class="summary">
+            <p>Shipping</p>
+            <p>$19</p>
+          </div>
+          <div class="summary">
+            <p>Total</p>
+            <p>$148.98</p>
+          </div>
+        </div>
+      </div>
+      <form action="#" id="form">
+        <fieldset>
+          <h3>Contact information</h3>
+          <label for="">E-mail</label>
+          <div class="input-container">
+            <input required="true" id="email" type="email" placeholder="Enter your email...">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <label for="">Phone</label>
+          <div class="input-container">
+            <input required="true" id="phone" type="tel" placeholder="Enter your phone...">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+        </fieldset>
+        <fieldset>
+          <h3>Shipping address</h3>
+          <label for="">Full name</label>
+          <div class="input-container">
+            <input required="true" type="text" placeholder="Your fullname..">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <label for="">Address</label>
+          <div class="input-container">
+            <input required="true" type="text" placeholder="Your address..">
+            <i class="fas fa-home"></i>
+          </div>
+          <label for="">City</label>
+          <div class="input-container">
+            <input required="true" type="text" placeholder="Your city..">
+            <i class="fas fa-city"></i>
+          </div>
+          <div class="form-additional">
+            <div style="margin-right: 10px;">
+              <label for="">Country</label>
+              <div class="input-container">
+                <select required="true" name="country" id="country">
+                  <option value="" selected disabled>Your country..</option>
+                  <option value="can">Canada</option>
+                  <option value="uk">UK</option>
+                  <option value="us">USA</option>
+                </select>
+                <span class="select"></span>
+                <i class="fas fa-globe-americas"></i>
+              </div>
+            </div>
+            <div style="margin-left: 10px;">
+              <label for="">Postal code</label>
+              <div class="input-container">
+                <i class="fas fa-address-card"></i>
+                <input required="true" type="text" placeholder="Your postal code...">
+              </div>
+            </div>
+          </div>
+          <div class="save-info">
+            <input type="checkbox" name="" id="save-info">
+            <label for="save-info">Save this information for next time</label>
+          </div>
+        </fieldset>
+        <button form="form" id="submit" type="submit">Continue</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
