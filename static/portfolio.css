@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #2f80ed;
+    --gray1: #333333;
+    --gray2: #4f4f4f;
+    --gray3: #828282;
+    --gray4: #f2f2f2;
+}
+
+img {
+    border-radius: 0.8rem;
+}
+
+body {
+    margin: 1rem auto;
+    background-color: var(--gray4);
+    width: min(95%, 1200px);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-weight: 500;
+    color: var(--gray2);
+}
+
+h3 {
+    color: var(--gray2);
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--gray3);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-grow: 1;
+}
+
+.column:nth-child(1) {
+    max-width: 400px;
+    flex-basis: 50%;
+}
+
+.column:nth-child(2) {
+    flex-basis: 50%;
+}
+
+.column > .card {
+    margin: 0.5rem;
+}
+
+.card {
+    position: relative;
+    border-radius: 0.8rem;
+    background-color: white;
+    padding: 1rem;
+    height: auto;
+    width: auto;
+    margin: 0.5rem;
+    box-shadow: 0 10px 7px #eee;
+}
+
+details .card {
+    margin-top: 1rem;
+}
+
+.profile {
+    display: initial;
+}
+
+.profile img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding-left: 0;
+    flex: 1;
+}
+
+.contact > div {
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    display: block;
+}
+
+.title > p {
+    margin-top: 0.5rem;
+    padding-bottom: 5px;
+}
+
+.contact {
+    margin-top: 0.3rem;
+}
+
+.contact > div {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.front__end {
+    width: 100%;
+    columns: 2 250px;
+}
+
+.front__end > div {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.front__end > div:nth-child(1) {
+    margin-top: 0;
+}
+
+.front__end .card {
+    padding-bottom: 0;
+}
+
+.front__end span {
+    color: var(--gray2);
+}
+
+.meter_container {
+    width: calc(100% - 10ch);
+    height: 10px;
+    background-color: var(--gray4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.meter-bar {
+    width: calc(1% * var(--value));
+    background-color: var(--blue);
+    border-radius: 5px;
+    height: 100%;
+    animation: fill 400ms linear;
+}
+
+@keyframes fill {
+    0% {
+        transform: scale(0, 1);
+        transform-origin: left;
+    }
+    100% {
+        transform: scale(1, 1);
+        transform-origin: left;
+    }
+}
+
+.project .flex img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    height: 250px;
+    width: 250px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.project .flex .content {
+    flex-basis: 22ch;
+    flex-grow: 2;
+}
+
+.project h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.btn-block {
+    margin: 1rem 0 0;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2765b6;
+    border-color: #2765b6;
+}
+
+.btn-outline {
+    border: 1px solid var(--blue);
+    background-color: white;
+    color: var(--blue);
+}
+
+.btn-outline:hover {
+    background-color: var(--gray4);
+    border-color: var(--gray4);
+}
+
+.hobby {
+    margin: 1rem 0;
+}
+
+.hobby > * {
+    margin: 0.5rem 0;
+}
+
+.hobby img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.margin {
+    margin: 2rem 0 1rem;
+}
+
+.flex img {
+    height: auto;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.flex h4 {
+    margin: 1rem 0 1rem;
+}
+
+summary {
+    cursor: pointer;
+    user-select: none;
+}
+
+details > summary::after {
+    content: 'Click for more';
+}
+
+details[open] > summary::after {
+    content: 'Hide';
+}
+
+@media only screen and (max-width: 851px) {
+    
+    
+    .meter_container  {
+        flex-basis: 100%;
+        margin-top: 0.3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .column:nth-child(1) {
+        max-width: 100%;
+    }
+
+    .flex {
+        flex-direction: row;
+    }
+
+}
